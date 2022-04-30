@@ -1,0 +1,1 @@
+npm install apollo-server-express graphql graphql-parse-fields sequelize sequelize-auto sequelize-cli
