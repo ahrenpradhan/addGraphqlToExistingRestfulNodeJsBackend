@@ -1,0 +1,27 @@
+extend type Query {
+  hello: String
+  users(where: UserInput_Where): [User]
+  user(where: UserInput_Where): User
+}
+
+# type Mutation {
+#   createUser(name:ÎString!, email: String!, password: String!, invite_code: Int!)
+# }
+
+input UserInput_Where {
+  id: Int
+  name: String
+  email: String
+}
+
+type User {
+  id: ID!
+  name: String
+  email: String
+  phone: String
+  password: String
+  is_email_varified: Boolean
+  created_by: Int
+  role_id: Int
+  role: Role
+}

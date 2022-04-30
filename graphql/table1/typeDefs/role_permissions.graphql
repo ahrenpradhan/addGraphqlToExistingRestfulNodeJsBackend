@@ -1,0 +1,17 @@
+extend type Query {
+  role_permissions(where: Role_PermissionInput_Where): [Role_Permission]
+}
+
+# type Mutation {
+#   createUser(name:ÎString!, email: String!, password: String!, invite_code: Int!)
+# }
+
+input Role_PermissionInput_Where {
+  role_id: Int
+  permission_id: Int
+}
+
+type Role_Permission {
+  role_id: Int
+  permission_id: Int
+}

@@ -1,0 +1,30 @@
+extend type Query {
+  permissions(where: PermissionInput_Where): [Permission]
+}
+
+# type Mutation {
+#   createUser(name:ÎString!, email: String!, password: String!, invite_code: Int!)
+# }
+
+input PermissionInput_Where {
+  id: ID
+  name: String
+  email: String
+}
+
+type Permission {
+  id: ID!
+  name: String
+  description: String
+  route: String
+  method: String
+  feature: String
+  module: String
+  sub_module: String
+  is_sidebar: Boolean
+  section: String
+  slug: String
+  sort_order: Int
+  key: String
+  link: String
+}

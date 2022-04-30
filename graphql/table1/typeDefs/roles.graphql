@@ -1,0 +1,23 @@
+extend type Query {
+  roles(where: RoleInput_Where): [Role]
+  role(where: RoleInput_Where): Role
+}
+
+# type Mutation {
+#   createUser(name:ÎString!, email: String!, password: String!, invite_code: Int!)
+# }
+
+input RoleInput_Where {
+  id: ID!
+  name: String
+  is_superadmin: Boolean
+  description: String
+}
+
+type Role {
+  id: ID!
+  name: String
+  is_superadmin: Boolean
+  description: String
+  users(where: UserInput_Where): [User]
+}
